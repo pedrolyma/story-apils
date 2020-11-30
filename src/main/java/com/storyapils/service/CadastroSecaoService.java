@@ -18,14 +18,13 @@ public class CadastroSecaoService {
 	
 	public Secao atualizar(Long codigo, Secao secao) {
 		Secao secaoSalva = buscarSecaoPeloCodigo(codigo);
-		
 		BeanUtils.copyProperties(secao, secaoSalva, "codigo");
 		return secaoRepository.save(secaoSalva);
 	}
 
-	public void atualizarPropriedadeAtivo(Long codigo, Boolean ativo) {
+	public void atualizarPropriedadeAtivo(Long codigo, Boolean statussecao) {
 		Secao secaoSalva = buscarSecaoPeloCodigo(codigo);
-		secaoSalva.setStatussecao(ativo);
+		secaoSalva.setStatussecao(statussecao);
 		secaoRepository.save(secaoSalva);
 	}
 	

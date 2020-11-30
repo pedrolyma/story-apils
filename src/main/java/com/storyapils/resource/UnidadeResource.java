@@ -42,8 +42,8 @@ public class UnidadeResource {
 	private ApplicationEventPublisher publisher;
 	
 	@GetMapping
-	public Page<Unidade> filtrar(UnidadeFilter unidadeFilter, Pageable pageable) {
-		return unidadeRepository.filtrar(unidadeFilter, pageable);
+	public Page<Unidade> listagem(Pageable pageable) {
+		return unidadeRepository.findAll(pageable);
 	}
 	
 	@PostMapping
@@ -71,7 +71,7 @@ public class UnidadeResource {
 		return ResponseEntity.ok(unidadeSalva);
 	}
 	
-	@PutMapping("/{codigo}/ativo")
+	@PutMapping("/{codigo}/statusunidade")
 	@ResponseStatus(HttpStatus.NO_CONTENT)
 	public void atualizarPropriedadeAtivo(@PathVariable Long codigo, @RequestBody Boolean ativo) {
 		unidadeService.atualizarPropriedadeAtivo(codigo, ativo);

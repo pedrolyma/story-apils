@@ -74,10 +74,10 @@ public class SecaoResource {
 		return ResponseEntity.ok(secaoSalva);
 	}
 	
-	@PutMapping("/{codigo}/ativo")
+	@PutMapping("/{codigo}/statussecao")
 	@ResponseStatus(HttpStatus.NO_CONTENT)
-	public void atualizarPropriedadeAtivo(@PathVariable Long codigo, @RequestBody Boolean ativo) {
-		secaoService.atualizarPropriedadeAtivo(codigo, ativo);
+	public void atualizarPropriedadeAtivo(@PathVariable Long codigo, @RequestBody Boolean statussecao) {
+		secaoService.atualizarPropriedadeAtivo(codigo, statussecao);
 	}
 
 }

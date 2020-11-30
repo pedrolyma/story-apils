@@ -24,9 +24,9 @@ public class CadastroModeloService {
 		return modeloRepository.save(modeloSalvo);
 	}
 
-	public void atualizarPropriedadeAtivo(Long codigo, Boolean ativo) {
+	public void atualizarPropriedadeAtivo(Long codigo, Boolean statusmodelo) {
 		Modelo modeloSalvo = buscarModeloPeloCodigo(codigo);
-		modeloSalvo.setStatusmodelo(ativo);
+		modeloSalvo.setStatusmodelo(statusmodelo);
 		modeloRepository.save(modeloSalvo);
 	}
 	

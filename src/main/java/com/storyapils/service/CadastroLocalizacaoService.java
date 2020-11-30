@@ -25,9 +25,9 @@ public class CadastroLocalizacaoService {
 		return localizacaoRepository.save(localizacaoSalva);
 	}
 
-	public void atualizarPropriedadeAtivo(Long codigo, Boolean ativo) {
+	public void atualizarPropriedadeAtivo(Long codigo, Boolean statuslocaliza) {
 		Localizacao localizacaoSalva = buscarLocalizacaoPeloCodigo(codigo);
-		localizacaoSalva.setStatuslocaliza(ativo);
+		localizacaoSalva.setStatuslocaliza(statuslocaliza);
 		localizacaoRepository.save(localizacaoSalva);
 	}
 	

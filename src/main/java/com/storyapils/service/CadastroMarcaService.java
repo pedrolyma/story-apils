@@ -23,9 +23,9 @@ public class CadastroMarcaService {
 		return marcaRepository.save(marcaSalva);
 	}
 
-	public void atualizarPropriedadeAtivo(Long codigo, Boolean ativo) {
+	public void atualizarPropriedadeAtivo(Long codigo, Boolean statusmarca) {
 		Marca marcaSalva = buscarMarcaPeloCodigo(codigo);
-		marcaSalva.setStatusmarca(ativo);
+		marcaSalva.setStatusmarca(statusmarca);
 		marcaRepository.save(marcaSalva);
 	}
 	

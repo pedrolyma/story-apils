@@ -9,8 +9,8 @@ import com.storyapils.model.Localizacao;
 import com.storyapils.repository.localizacao.LocalizacaoRepositoryQuery;
 
 @Repository
-public interface LocalizacaoRepository extends JpaRepository<Localizacao, Long>, LocalizacaoRepositoryQuery {
+public interface LocalizacaoRepository extends JpaRepository<Localizacao, Long> {
 	
-	public Optional<Localizacao> findByDescricao(String descricao);
+//	public Optional<Localizacao> findByDescricao(String descricao);
 
 }

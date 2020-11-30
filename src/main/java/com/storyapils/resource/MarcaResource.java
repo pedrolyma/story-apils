@@ -73,10 +73,10 @@ public class MarcaResource {
 		return ResponseEntity.ok(marcaSalva);
 	}
 	
-	@PutMapping("/{codigo}/ativo")
+	@PutMapping("/{codigo}/statusmarca")
 	@ResponseStatus(HttpStatus.NO_CONTENT)
-	public void atualizarPropriedadeAtivo(@PathVariable Long codigo, @RequestBody Boolean ativo) {
-		marcaService.atualizarPropriedadeAtivo(codigo, ativo);
+	public void atualizarPropriedadeAtivo(@PathVariable Long codigo, @RequestBody Boolean statusmarca) {
+		marcaService.atualizarPropriedadeAtivo(codigo, statusmarca);
 	}
 
 }

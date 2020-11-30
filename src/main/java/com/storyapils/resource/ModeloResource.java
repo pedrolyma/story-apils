@@ -72,10 +72,10 @@ public class ModeloResource {
 		return ResponseEntity.ok(modeloSalvo);
 	}
 	
-	@PutMapping("/{codigo}/ativo")
+	@PutMapping("/{codigo}/statusmodelo")
 	@ResponseStatus(HttpStatus.NO_CONTENT)
-	public void atualizarPropriedadeAtivo(@PathVariable Long codigo, @RequestBody Boolean ativo) {
-		modeloService.atualizarPropriedadeAtivo(codigo, ativo);
+	public void atualizarPropriedadeAtivo(@PathVariable Long codigo, @RequestBody Boolean statusmodelo) {
+		modeloService.atualizarPropriedadeAtivo(codigo, statusmodelo);
 	}
 
 }

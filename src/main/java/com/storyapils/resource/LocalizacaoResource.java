@@ -41,8 +41,8 @@ public class LocalizacaoResource {
 	private ApplicationEventPublisher publisher;
 	
 	@GetMapping
-	public Page<Localizacao> pesquisar(LocalizacaoFilter localizacaoFilter, Pageable pageable) {
-		return localizacaoRepository.filtrar(localizacaoFilter, pageable);
+	public Page<Localizacao> pesquisar(Pageable pageable) {
+		return localizacaoRepository.findAll(pageable);
 	}
 	
 	@PostMapping
@@ -70,10 +70,10 @@ public class LocalizacaoResource {
 		return ResponseEntity.ok(localizacaoSalva);
 	}
 	
-	@PutMapping("/{codigo}/ativo")
+	@PutMapping("/{codigo}/statuslocaliza")
 	@ResponseStatus(HttpStatus.NO_CONTENT)
-	public void atualizarPropriedadeAtivo(@PathVariable Long codigo, @RequestBody Boolean ativo) {
-		localizacaoService.atualizarPropriedadeAtivo(codigo, ativo);
+	public void atualizarPropriedadeAtivo(@PathVariable Long codigo, @RequestBody Boolean statuslocaliza) {
+		localizacaoService.atualizarPropriedadeAtivo(codigo, statuslocaliza);
 	}
 
 }

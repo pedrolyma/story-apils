@@ -72,7 +72,7 @@ public class ProdutoResource {
 		return ResponseEntity.ok(produtoSalvo);
 	}
 	
-	@PutMapping("/{codigo}/ativo")
+	@PutMapping("/{codigo}/statusproduto")
 	@ResponseStatus(HttpStatus.NO_CONTENT)
 	public void atualizarPropriedadeAtivo(@PathVariable Long codigo, @RequestBody Boolean ativo) {
 		produtoService.atualizarPropriedadeAtivo(codigo, ativo);

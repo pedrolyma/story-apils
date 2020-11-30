@@ -9,8 +9,8 @@ import com.storyapils.model.Unidade;
 import com.storyapils.repository.unidade.UnidadeRepositoryQuery;
 
 @Repository
-public interface UnidadeRepository extends JpaRepository<Unidade, Long>, UnidadeRepositoryQuery {
+public interface UnidadeRepository extends JpaRepository<Unidade, Long> {
 	
-	public Optional<Unidade> findByDescricao(String descricao);
+//	public Optional<Unidade> findByDescricao(String descricao);
 
 }
